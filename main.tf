@@ -4,7 +4,7 @@ terraform {
 
 # https://www.nomadproject.io/guides/cluster/requirements.html#ports-used
 module "nomad_client_ports_aws" {
-  source = "git@github.com:hashicorp-modules/nomad-client-ports-aws?ref=f-refactor"
+  source = "github.com/hashicorp-modules/nomad-client-ports-aws?ref=f-refactor"
 
   count       = "${var.count}"
   name        = "${var.name}"
