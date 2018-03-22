@@ -1,6 +1,6 @@
-variable "count" {
-  default     = "1"
-  description = "Module count, defaults to \"1\"."
+variable "create" {
+  description = "Create Module, defaults to true."
+  default     = true
 }
 
 variable "name" {
@@ -15,4 +15,10 @@ variable "vpc_id" {
 variable "cidr_blocks" {
   type        = "list"
   description = "CIDR blocks for Security Groups."
+}
+
+variable "tags" {
+  description = "Optional map of tags to set on resources, defaults to empty map."
+  type        = "map"
+  default     = {}
 }
