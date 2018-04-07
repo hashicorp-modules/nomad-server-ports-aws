@@ -2,6 +2,10 @@ terraform {
   required_version = ">= 0.9.3"
 }
 
+provider "aws" {
+  version = "~> 1.12"
+}
+
 # https://www.nomadproject.io/guides/cluster/requirements.html#ports-used
 module "nomad_client_ports_aws" {
   source = "github.com/hashicorp-modules/nomad-client-ports-aws?ref=f-refactor"
