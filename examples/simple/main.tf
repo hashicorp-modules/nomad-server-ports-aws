@@ -6,7 +6,7 @@ resource "aws_vpc" "main" {
 }
 
 module "nomad_server_ports_aws" {
-  # source = "github.com/hashicorp-modules/nomad-server-ports-aws?ref=f-refactor"
+  # source = "github.com/hashicorp-modules/nomad-server-ports-aws"
   source = "../../../nomad-server-ports-aws"
 
   vpc_id      = "${aws_vpc.main.id}"
